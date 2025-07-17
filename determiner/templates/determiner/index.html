@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Determiner</title>
+        <link rel="stylesheet" href="{% static 'determiner/style.css' %}">
+    </head>
+<body>
+<center>
+<h2> Check Whether </h2>
+
+<form action="" method="POST">
+    {% csrf_token %}
+  <label for="fname">NUMBER</label><br>
+  <input type="text" name="number"><br>
+  <button type="submit" name ="prime">Prime</button>
+  <button type="submit" name ="arm">ARMSTRONG</button>
+  <button type="submit" name ="pal">Palindrome</button>
+</form> 
+
+{% if result %}
+    <h1>{{result}}</h1>
+    {% endif %}
+</center>
+ 
+
+
+</body>
+</html>
